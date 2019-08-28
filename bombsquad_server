@@ -60,7 +60,7 @@ config['language'] = 'English'
 # multiple controllers. Also, this number currently includes the server so
 # generally make it 1 bigger than you need. Max-players is not currently
 # exposed but I'll try to add that soon.
-config['maxPartySize'] = 6
+config['maxPartySize'] = 8
 
 # Options here are 'ffa' (free-for-all) and 'teams'
 # this value is only used if you do not supply a playlistCode (see below);
@@ -70,7 +70,7 @@ config['sessionType'] = 'ffa'
 # To host your own custom playlists, use the 'share' functionality in the
 # playlist editor in the regular version of the game.
 # This will give you a numeric code you can enter here to host that playlist.
-config['playlistCode'] = None
+config['playlistCode'] = 227463
 
 # Whether to shuffle the playlist or play its games in designated order
 config['playlistShuffle'] = True
