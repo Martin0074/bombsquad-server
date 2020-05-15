@@ -204,9 +204,4 @@ while restart_server:
             
             config_dirty = False
 
-        code = result.poll()
-        if code is not None:
-            print('BombSquad exited with code ' + str(code))
-            break
-
         time.sleep(1)
