@@ -1,1 +1,1 @@
-worker: python bombsquad_server
+worker: python config.py
