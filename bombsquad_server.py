@@ -201,18 +201,7 @@ while restart_server:
             config['quit'] = True
             config['quitReason'] = 'restarting'
             config_dirty = True
-
-        # whenever the config changes, dump it to a json file and feed it to the
-        # running server
-        if config_dirty:
-            f = tempfile.NamedTemporaryFile(mode='w', delete=False)
-            fname = f.name
-            f.write(json.dumps(config))
-            f.close()
-            # (game handles deleting this file for us once its done with it)
-            result.stdin.write(('bsUtils.configServer(configFile=' +
-                                repr(fname) + ')\n').encode('utf-8'))
-            result.stdin.flush()
+            
             config_dirty = False
 
         code = result.poll()
