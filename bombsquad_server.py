@@ -170,10 +170,6 @@ while restart_server:
     f.write(json.dumps(bscfg))
     f.close()
 
-    # launch our binary and grab its stdin; we'll use this to feed it commands
-    result = subprocess.Popen(
-        [binary_path, '-cfgdir', 'bscfg'], stdin=subprocess.PIPE)
-
     # set quit to True any time after launching the server to gracefully quit it
     # at the next clean opportunity (end of the current series, etc)
     config['quit'] = False
